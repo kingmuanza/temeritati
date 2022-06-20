@@ -13,9 +13,20 @@ export class ProfilComponent implements OnInit {
     sub3: false
   };
 
+  listOfOption: Array<{ label: string; value: string }> = [];
+  listOfTagOptions = [];
+
+  profil = true;
+  apropos = false;
+
   constructor() { }
 
   ngOnInit(): void {
+    const children: Array<{ label: string; value: string }> = [];
+    for (let i = 10; i < 36; i++) {
+      children.push({ label: i.toString(36) + i, value: i.toString(36) + i });
+    }
+    this.listOfOption = children;
   }
 
   openHandler(value: string): void {
@@ -23,6 +34,17 @@ export class ProfilComponent implements OnInit {
       if (key !== value) {
         this.openMap[key] = false;
       }
+    }
+  }
+
+  selectionner(menu: string) {
+    this.profil = false;
+    this.apropos = false;
+    if (menu === 'profil') {
+      this.profil = true;
+    }
+    if (menu === 'apropos') {
+      this.apropos = true;
     }
   }
 

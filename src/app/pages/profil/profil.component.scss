@@ -101,3 +101,34 @@ label {
     color: #F759AB;
     margin-left: 20px;
 }
+
+nz-select {
+    width: 100%;
+}
+
+.cv {
+    margin-top: 40px;
+    /* Neutral/2 */
+    background: #FAFAFA;
+    /* Neutral/5 */
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0px;
+    gap: 20px;
+    width: 395px;
+    .icone {
+        text-align: center;
+        font-size: 3rem;
+        color: #F759AB;
+    }
+    .texte {
+        text-align: center;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

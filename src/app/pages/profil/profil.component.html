@@ -15,10 +15,10 @@
         <div nz-row>
             <div nz-col nzSpan="6" style="height: 100%; background-color: #fff;">
                 <ul nz-menu nzMode="inline" style="width: 100%;">
-                    <li nz-menu-item>
+                    <li nz-menu-item (click)="selectionner('profil')" [nzSelected]="profil">
                         Profil
                     </li>
-                    <li nz-menu-item>
+                    <li nz-menu-item (click)="selectionner('apropos')" [nzSelected]="apropos">
                         A propos de vous
                     </li>
                     <li nz-menu-item>
@@ -30,7 +30,31 @@
                 </ul>
             </div>
             <div nz-col nzSpan="18">
-                <div class="padding">
+                <div class="padding" *ngIf="apropos">
+                    <div class="petit-titre">
+                        A propos de vous
+                    </div>
+                    <div class="formulaire">
+                        <div class="input-group">
+
+                            <label for="">Compétences</label>
+                            <nz-select nzMode="tags" nzPlaceHolder="Tag Mode" [(ngModel)]="listOfTagOptions">
+                                <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+                            </nz-select>
+                        </div>
+                        <div>
+                            <div class="cv">
+                                <div class="icone">
+                                    <i nz-icon nzType="inbox" nzTheme="outline"></i>
+                                </div>
+                                <div class="texte">
+                                    Vous pouvez importer votre CV ici
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding" *ngIf="profil">
                     <div class="petit-titre">
                         Profil
                     </div>
@@ -56,9 +80,9 @@
                                 <div class="input-group">
                                     <label for="">
                                         Mot de passe
-                                    <span class="message">
-                                        Changer le mot de passe
-                                    </span>
+                                        <span class="message">
+                                            Changer le mot de passe
+                                        </span>
                                     </label>
                                     <input nz-input placeholder="Basic usage" style="width: 100%;" />
                                 </div>
