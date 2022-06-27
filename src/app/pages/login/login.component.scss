@@ -1,0 +1,132 @@
+.login-container {
+    background-image: url("../../../assets/img/bg-login.png");
+    background-repeat: no-repeat;
+}
+
+.dv-login-title {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+.dv-login-text {
+    margin: 0 auto;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #747272;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.dv-login-text {
+    margin: 0 auto;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #747272;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.title-text {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 38px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    /* black 2 */
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.login-form {
+    margin: 0 auto;
+    padding-top: 88px;
+    padding-bottom: 100px;
+}
+
+.login-form-margin {
+    margin-bottom: 16px;
+    span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: rgba(0, 0, 0, 0.85);
+    }
+}
+
+.login-form-forgot {
+    float: right;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #F759AB;
+}
+
+.login-form-button {
+    width: 100%;
+    background-color: #F759AB;
+    border: 1px solid #F759AB;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+    border-radius: 10px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.ant-checkbox-inner {
+    background-color: #F759AB !important;
+    border: 1px solid #FFF2F2 !important;
+    border-radius: 2px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+}
+
+.ant-input-affix-wrapper {
+    border-radius: 10px;
+}
+
+.login-footer {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.login-footer-text {
+    font-family: 'Roboto';
+    margin: 0 auto;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.45);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+input {
+    width: 100%;
+}

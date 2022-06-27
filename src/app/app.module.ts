@@ -7,7 +7,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { fr_FR } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import fr from '@angular/common/locales/fr';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -21,6 +21,8 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 
 import { ProfilComponent } from './pages/profil/profil.component';
+import { LoginComponent } from './pages/login/login.component';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 registerLocaleData(fr);
 
@@ -33,12 +35,15 @@ const ngZorroConfig: NzConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    ProfilComponent
+    ProfilComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
 
@@ -49,6 +54,7 @@ const ngZorroConfig: NzConfig = {
     NzGridModule,
     NzInputModule,
     NzSelectModule,
+    NzButtonModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: fr_FR },
