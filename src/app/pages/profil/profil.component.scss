@@ -100,6 +100,10 @@ label {
     line-height: 22px;
     color: #F759AB;
     margin-left: 20px;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.9;
+    }
 }
 
 nz-select {
@@ -130,5 +134,14 @@ nz-select {
         font-weight: 400;
         font-size: 14px;
         line-height: 24px;
+    }
+}
+
+li.ant-menu-item.ant-menu-item-selected {
+    background-color: #FFF0F6;
+    color: #F759AB;
+    border: 0px solid #000;
+    &:after {
+        content: none;
     }
 }

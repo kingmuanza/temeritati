@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NzConfigService } from 'ng-zorro-antd/core/config';
 
 @Component({
   selector: 'app-profil',
@@ -19,7 +20,11 @@ export class ProfilComponent implements OnInit {
   profil = true;
   apropos = false;
 
-  constructor() { }
+  constructor(
+    private nzConfigService: NzConfigService
+  ) {
+    this.nzConfigService.set('theme', { primaryColor: '#550000' });
+  }
 
   ngOnInit(): void {
     const children: Array<{ label: string; value: string }> = [];
