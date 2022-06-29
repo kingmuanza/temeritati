@@ -23,6 +23,9 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { ProfilComponent } from './pages/profil/profil.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { FooterComponent } from './_composants/footer/footer.component';
+import { MenuHautComponent } from './_composants/menu-haut/menu-haut.component';
+import { Login2Component } from './pages/login2/login2.component';
 
 registerLocaleData(fr);
 
@@ -36,7 +39,10 @@ const ngZorroConfig: NzConfig = {
   declarations: [
     AppComponent,
     ProfilComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponent,
+    MenuHautComponent,
+    Login2Component
   ],
   imports: [
     BrowserModule,

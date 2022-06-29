@@ -16,24 +16,24 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
-      login: [null, [Validators.required]],
-      password: [null, [Validators.required]],
+      login: ["login", [Validators.required]],
+      password: ["passe", [Validators.required]],
       remember: [true]
     });
   }
 
   submitForm(): void {
     if (this.validateForm.valid) {
-      this.authservice.login(this.validateForm.value.login,this.validateForm.value.password).subscribe(res =>{
+      this.router.navigate(['login', 'first']);
+      /* this.authservice.login(this.validateForm.value.login,this.validateForm.value.password).subscribe(res =>{
         if(res.Id > 0){
           alert("Successfully logged in");
           localStorage.setItem('user', res);
-          this.router.navigate(['/login']);
         }
         else{
           alert("Email address or password is invalid!");
         }
-      })
+      }) */
     } else {
       Object.values(this.validateForm.controls).forEach(control => {
         if (control.invalid) {

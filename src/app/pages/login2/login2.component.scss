@@ -31,12 +31,17 @@
 }
 
 .login-sous-titre {
+    /* IBM/regular/14pt */
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
+    /* or 157% */
+    text-align: center;
     padding-bottom: 40px;
+    /* grey 1 */
+    color: #747272;
 }
 
 .dv-login-text {
@@ -116,9 +121,7 @@ nz-form-control {
     width: 100%;
 }
 
-nz-form-item {
-    margin-bottom: 20px;
-}
+nz-form-item {}
 
 .souvenir {
     font-family: 'IBM Plex Sans';
@@ -127,4 +130,29 @@ nz-form-item {
     font-size: 14px;
     line-height: 22px;
     vertical-align: middle;
+}
+
+.message-complementaire {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+    text-align: left;
+    /* Character / Secondary .45 */
+    color: rgba(0, 0, 0, 0.45);
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.souvenir-forgot {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input,
+nz-input-group,
+nz-input {
+    text-align: left;
 }
