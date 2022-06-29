@@ -1,6 +1,6 @@
 <!-- NG-ZORRO -->
-<ul nz-menu nzMode="horizontal" nzTheme="dark" style="color: white;">
-    <li nz-menu-item>
+<ul *ngIf="afficherMenu" nz-menu nzMode="horizontal" nzTheme="dark" style="color: white;">
+    <li nz-menu-item (click)="home()">
         <img src="../assets/img/HeaderLogo.png" alt="">
         <span class="app-name" style="">Temeritati</span>
     </li>
@@ -9,7 +9,7 @@
             FR
         </a>
     </li>
-    <li nz-menu-item style="float: right">
+    <li nz-menu-item style="float: right" (click)="logIn()">
 
         <div class="pp-container" style="">
             <div class="pp">

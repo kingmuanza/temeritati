@@ -1,12 +1,42 @@
 .login-container {
     background-image: url("../../../assets/img/bg-login.png");
     background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.login-box {
+    width: 360px;
+    margin: auto;
+    text-align: center;
+    padding-top: calc(15vh);
+    // sbackground-color: rgba(0, 0, 0, 0.043);
 }
 
 .dv-login-title {
-    display: flex;
-    margin: 0 auto;
-    padding-top: 120px;
+    .title-text {
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 100px;
+        color: rgba(0, 0, 0, 0.85);
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+    img {
+        max-height: 46px;
+        min-width: 46px;
+        vertical-align: middle;
+    }
+}
+
+.login-sous-titre {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 40px;
 }
 
 .dv-login-text {
@@ -25,7 +55,7 @@
     line-height: 22px;
 }
 
-.dv-login-text {
+.dv-login-text2 {
     margin: 0 auto;
     padding-top: 30px;
     display: flex;
@@ -41,7 +71,7 @@
     line-height: 22px;
 }
 
-.title-text {
+.title-text2 {
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 700;
@@ -54,13 +84,13 @@
     color: rgba(0, 0, 0, 0.85);
 }
 
-.login-form {
+.login-form2 {
     margin: 0 auto;
     padding-top: 88px;
     padding-bottom: 100px;
 }
 
-.login-form-margin {
+.login-form-margin2 {
     margin-bottom: 16px;
     span {
         font-weight: 400;
@@ -71,15 +101,16 @@
 }
 
 .login-form-forgot {
-    float: right;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
-    text-align: center;
+    text-align: right;
     color: #F759AB;
 }
 
-.login-form-button {
+.login-form-button2 {
     width: 100%;
     background-color: #F759AB;
     border: 1px solid #F759AB;
@@ -100,17 +131,17 @@
     z-index: 1;
 }
 
-.ant-input-affix-wrapper {
+.ant-input-affix-wrapper2 {
     border-radius: 10px;
 }
 
-.login-footer {
+.login-footer2 {
     display: flex;
     margin: 0 auto;
     padding-top: 100px;
 }
 
-.login-footer-text {
+.login-footer-text2 {
     font-family: 'Roboto';
     margin: 0 auto;
     padding-top: 10px;
@@ -129,4 +160,36 @@
 
 input {
     width: 100%;
+}
+
+.anticon.anticon-user,
+.anticon.anticon-lock {
+    color: #F759AB !important;
+}
+
+nz-form-item,
+nz-form-control {
+    width: 100%;
+}
+
+nz-form-item {
+    margin-bottom: 20px;
+}
+
+.souvenir {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    vertical-align: middle;
+}
+
+.footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
 }
