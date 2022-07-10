@@ -20,6 +20,7 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzStepsModule } from 'ng-zorro-antd/steps';
 
 import { ProfilComponent } from './pages/profil/profil.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -28,6 +29,7 @@ import { FooterComponent } from './_composants/footer/footer.component';
 import { MenuHautComponent } from './_composants/menu-haut/menu-haut.component';
 import { Login2Component } from './pages/login2/login2.component';
 import { CraComponent } from './pages/cra/cra.component';
+import { CraDetailComponent } from './pages/cra-detail/cra-detail.component';
 
 registerLocaleData(fr);
 
@@ -45,7 +47,8 @@ const ngZorroConfig: NzConfig = {
     FooterComponent,
     MenuHautComponent,
     Login2Component,
-    CraComponent
+    CraComponent,
+    CraDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +68,7 @@ const ngZorroConfig: NzConfig = {
     NzSelectModule,
     NzButtonModule,
     NzTableModule,
+    NzStepsModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: fr_FR },
