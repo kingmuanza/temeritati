@@ -38,7 +38,16 @@ export class AppComponent {
   logIn() {
     this.router.navigate(['login']);
   }
+
+  profil() {
+    this.router.navigate(['profil']);
+  }
+
   home() {
     this.router.navigate(['/']);
+  }
+  
+  cra() {
+    this.router.navigate(['/cra']);
   }
 }
