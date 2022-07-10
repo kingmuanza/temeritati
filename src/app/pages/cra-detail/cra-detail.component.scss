@@ -115,3 +115,25 @@ th {
         }
     }
 }
+
+.ligne {
+    position: relative;
+    line-height: 65px;
+    text-align: center;
+    height: 65px;
+    &.primaire {
+        background-color: #F759AB;
+        color: white;
+        border-radius: 2px;
+    }
+    &.grise {
+        background: #BBBBBB;
+        color: white;
+        border-top-left-radius: 10px;
+    }
+    &.blanche {
+        background-color: white;
+        color: #747272;
+        border-top-left-radius: 10px;
+    }
+}

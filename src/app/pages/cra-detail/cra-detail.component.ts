@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CraDetailComponent implements OnInit {
 
+  liste = [1,2,3,4,5];
   constructor() { }
 
   ngOnInit(): void {
