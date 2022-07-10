@@ -44,6 +44,54 @@ export class CraComponent implements OnInit {
       english: 'Saisir'
     },
   ];
+  listOfDataEnAttente = [
+    {
+      name: 'Décembre 2021',
+      chinese: 'Fortuneo',
+      math: 'Audit IT',
+      english: 'Saisir'
+    },
+  ];
+  listOfDataValidees = [
+    {
+      name: 'Janvier 2022',
+      chinese: 'Fortuneo',
+      math: 'Audit IT',
+      english: 'Saisir'
+    },
+    {
+      name: 'Novembre 2021',
+      chinese: 'Fortuneo',
+      math: 'Audit IT',
+      english: 'Saisir'
+    },
+    {
+      name: 'Octobre 2021',
+      chinese: 'Fortuneo',
+      math: 'Audit IT',
+      english: 'Saisir'
+    },
+  ];
+  listOfDataArchivees = [
+    {
+      name: 'Janvier 2022',
+      chinese: 'Fortuneo',
+      math: 'Audit IT',
+      english: 'Saisir'
+    },
+    {
+      name: 'Novembre 2021',
+      chinese: 'Fortuneo',
+      math: 'Audit IT',
+      english: 'Saisir'
+    },
+    {
+      name: 'Octobre 2021',
+      chinese: 'Fortuneo',
+      math: 'Audit IT',
+      english: 'Saisir'
+    },
+  ];
   constructor() { }
 
   ngOnInit(): void {
