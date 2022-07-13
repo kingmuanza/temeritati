@@ -50,4 +50,8 @@ export class AppComponent {
   cra() {
     this.router.navigate(['/cra']);
   }
+  
+  evaluations() {
+    this.router.navigate(['/evaluations']);
+  }
 }
