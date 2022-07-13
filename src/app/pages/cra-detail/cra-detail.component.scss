@@ -137,3 +137,11 @@ th {
         border-top-left-radius: 10px;
     }
 }
+
+.bg {
+    background-image: url('../../../assets/img/bg.png');
+    background-size: cover;
+    background-position: bottom right;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
