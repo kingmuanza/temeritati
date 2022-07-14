@@ -64,38 +64,3 @@ th {
     min-height: 100vh;
     background-attachment: fixed;
 }
-
-.contenu {
-    font-family: 'IBM Plex Sans';
-    width: 1000px;
-    margin: auto;
-    padding: 40px;
-    margin-top: 40px;
-    &-inner {
-        padding-left: 80px;
-        padding-right: 80px;
-    }
-    &-boutons {
-        text-align: right;
-        margin-top: 40px;
-    }
-}
-
-.mi-titre {
-    font-family: 'IBM Plex Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 22px;
-    /* identical to box height, or 110% */
-    /* Pink */
-    color: #F759AB;
-    text-align: center;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #eee;
-}
-
-input[type='radio'] {
-    accent-color: #F759AB;
-}

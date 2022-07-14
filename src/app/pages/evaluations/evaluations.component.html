@@ -3,93 +3,156 @@
         <nz-breadcrumb>
             <nz-breadcrumb-item>Évaluations</nz-breadcrumb-item>
             <nz-breadcrumb-item>
-                <a>Auto-évaluations</a>
+                <a>Toutes</a>
             </nz-breadcrumb-item>
 
         </nz-breadcrumb>
-        <div class="titre">FOR_04_22_2</div>
-
-    </div>
-
-    <div class="shadow-1 contenu">
-        <div class="mi-titre">
-            Bienvenue au sein de cette évaluation
-        </div>
-        <div class="contenu-inner" style="font-size: 1.1em;">
-
-            <p>
-                <b>
-
-                    Les accès à cette évaluation vous ont été ouverts dans le cadre de votre fin de mission Au cours de
-                    cette évaluation,
-                    vous serez invité à répondre à plusieurs questions dont les réponses sont prédéfinies ou non.
-
-                </b>
-            </p>
-
-            <p>
-                L’évaluation se réalisera au travers de 3 thèmes distincts
-
-            </p>
-            <div style="margin-left: 0; padding-left: 0;">
-                <div>1) Le résumé de la mission</div>
-                <div>2) Les objectifs de la mission</div>
-                <div>3) L’auto-évaluation</div>
-            </div>
-
-            <div style="margin-top: 40px; margin-bottom: 20px;">
-                <b>
-
-                    Avant de commencer, veuillez confirmer les informations ci dessous :
-                </b>
-            </div>
-
-
-            <p>
-                <b>Client</b> : Fortuneo
-            </p>
-            <p>
-                Confirmez-vous le client ?
-                <span style="margin-left: 10px;">
-                    <input type="radio" name="client" value="1" [(ngModel)]="client"> 
-                    <span style="margin-left: 5px;">
-                        Oui 
-                    </span>
-                </span>
-                <span style="margin-left: 10px;">
-                    <input type="radio" name="client" value="0" [(ngModel)]="client">
-                    <span style="margin-left: 5px;">
-                        Non 
-                    </span>
-                </span>
-            </p>
-            <p *ngIf="client === '0'" style="margin-bottom: 20px">
-                <a href="#">
-                    <i nz-icon nzType="comment" nzTheme="outline"></i> Ajouter un commentaire
-                </a>
-            </p>
-            <p>
-                <b>Mission</b> : Audit interne finance
-            </p>
-            <p>
-                Confirmez-vous la mission ?
-                <span style="margin-left: 10px;">
-                    <input type="radio" name="mission">
-                    <span style="margin-left: 5px;">
-                        Oui 
-                    </span>
-                </span>
-                <span style="margin-left: 10px;">
-                    <input type="radio" name="mission">
-                    <span style="margin-left: 5px;">
-                        Non 
-                    </span>
-                </span>
-            </p>
-        </div>
-        <div class="contenu-boutons" style="">
-            <button (click)="resumee()" nz-button nzType="primary">Commencez l'évaluation</button> &nbsp;
-            <button nz-button>Enregistrer et finir plus tard</button>
+        <div class="titre">Évaluations</div>
+        <div class="soustitre">
+            Retrouvez ici vos auto-évaluations ainsi que les évaluations de vos managers.
         </div>
     </div>
+
+    <div style="margin-top: 20px">
+        <ul nz-menu nzMode="horizontal">
+            <li nz-menu-item (click)="selectionner('aSaisir')" [nzSelected]="aSaisir">
+                <span class="menu-design">Auto-évaluation</span>
+                <span class="badge">
+                    03
+                </span>
+            </li>
+            <li nz-menu-item (click)="selectionner('enAttente')" [nzSelected]="enAttente">
+                <span class="menu-design">Évaluations</span>
+                <span class="badge">
+                    02
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contenu">
+        <div *ngIf="aSaisir">
+            <div style="margin:40px">
+                <div style="margin-bottom:20px">
+                    <div nz-row>
+                        <div nz-col nzSpan="16">
+
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div>
+                                <nz-input-group nzSearch [nzAddOnAfter]="prefixTemplateUser">
+                                    <input type="text" nz-input placeholder="Rechercher une évaluation" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser>
+                                    <button nz-button nzType="primary" nzSearch>
+                                    <i nz-icon nzType="search"></i>
+                                </button>
+                                </ng-template>
+                            </div>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div style="margin-left: 20px">
+                                <nz-input-group nzSearch [nzSuffix]="prefixTemplateUser2">
+                                    <input type="text" nz-input placeholder="Chercher une date" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser2>
+
+                                    <i nz-icon nzType="calendar" style="color: #F759AB"></i>
+
+                                </ng-template>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <nz-table #sortTable [nzData]="listOfData" nzTableLayout="fixed">
+                    <thead>
+                        <tr>
+                            <th style="width: 80px;" [nzChecked]="false"></th>
+                            <th *ngFor="let column of listOfColumn" [nzSortFn]="column.compare" [nzSortPriority]="column.priority">
+                                <b>
+                                    {{ column.title }}
+                                </b>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of sortTable.data">
+                            <td style="width: 80px;" [nzChecked]="false"></td>
+                            <td>{{ data.name }}</td>
+                            <td>{{ data.chinese }}</td>
+                            <td>{{ data.math }}</td>
+                            <td>{{ data.math2 }}</td>
+                            <td>
+                                <a routerLink="/evaluations/nouveau">Modifier</a> &nbsp; &nbsp;
+                                <a href="#">Prévisualiser</a> &nbsp; &nbsp;
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </div>
+        </div>
+        <div *ngIf="enAttente">
+            <div style="margin:40px">
+                <div style="margin-bottom:20px">
+                    <div nz-row>
+                        <div nz-col nzSpan="16">
+
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div>
+                                <nz-input-group nzSearch [nzAddOnAfter]="prefixTemplateUser">
+                                    <input type="text" nz-input placeholder="Rechercher une évaluation" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser>
+                                    <button nz-button nzType="primary" nzSearch>
+                                    <i nz-icon nzType="search"></i>
+                                </button>
+                                </ng-template>
+                            </div>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div style="margin-left: 20px">
+                                <nz-input-group nzSearch [nzSuffix]="prefixTemplateUser2">
+                                    <input type="text" nz-input placeholder="Chercher une date" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser2>
+
+                                    <i nz-icon nzType="calendar" style="color: #F759AB"></i>
+
+                                </ng-template>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <nz-table #sortTable [nzData]="listOfData" nzTableLayout="fixed">
+                    <thead>
+                        <tr>
+                            <th style="width: 80px;" [nzChecked]="false"></th>
+                            <th *ngFor="let column of listOfColumn" [nzSortFn]="column.compare" [nzSortPriority]="column.priority">
+                                <b>
+                                    {{ column.title }}
+                                </b>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of sortTable.data">
+                            <td style="width: 80px;" [nzChecked]="false"></td>
+                            <td>{{ data.name }}</td>
+                            <td>{{ data.chinese }}</td>
+                            <td>{{ data.math }}</td>
+                            <td>{{ data.math2 }}</td>
+                            <td>
+                                <a routerLink="/evaluations/nouveau">Modifier</a> &nbsp; &nbsp;
+                                <a href="#">Prévisualiser</a> &nbsp; &nbsp;
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </div>
+        </div>
+    </div>
+
 </div>

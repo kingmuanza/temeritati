@@ -34,6 +34,7 @@ import { CraDetailComponent } from './pages/cra-detail/cra-detail.component';
 import { MoisComponent } from './_composants/mois/mois.component';
 import { EvaluationsComponent } from './pages/evaluations/evaluations.component';
 import { EvaluationsResumeComponent } from './pages/evaluations-resume/evaluations-resume.component';
+import { EvaluationsNouveauComponent } from './pages/evaluations-nouveau/evaluations-nouveau.component';
 
 registerLocaleData(fr);
 
@@ -55,7 +56,8 @@ const ngZorroConfig: NzConfig = {
     CraDetailComponent,
     MoisComponent,
     EvaluationsComponent,
-    EvaluationsResumeComponent
+    EvaluationsResumeComponent,
+    EvaluationsNouveauComponent
   ],
   imports: [
     BrowserModule,

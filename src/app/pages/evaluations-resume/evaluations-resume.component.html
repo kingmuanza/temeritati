@@ -119,10 +119,70 @@
 
         </div>
         <div *ngIf="current === 2">
-            <div class="contenu-inner" style="font-size: 1.1em;">
+            <div class="auto-evaluation contenu-inner" style="font-size: 1.1em;">
                 <div>
                     <div class="libelle">
                         Relationnel Client
+                    </div>
+                    <div>
+                        <div class="icon-wrapper test-class">
+                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Connaissances du domaine
+                    </div>
+                    <div>
+                        <div class="icon-wrapper test-class">
+                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Compétences outils
+                    </div>
+                    <div>
+                        <div class="icon-wrapper test-class">
+                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Adaptabilité de la mission
+                    </div>
+                    <div>
+                        <div class="icon-wrapper test-class">
+                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Capacité à monter en compétences
+                    </div>
+                    <div>
+                        <div class="icon-wrapper test-class">
+                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Atteinte des objectifs chez le client
                     </div>
                     <div>
                         <div class="icon-wrapper test-class">
@@ -145,7 +205,7 @@
                 </div>
             </div>
             <div class="contenu-boutons" style="">
-                <button (click)="passerAEtape3()" nz-button nzType="primary">Suivant</button> &nbsp;
+                <button (click)="passerAEtape3()" nz-button nzType="primary">Terminer</button> &nbsp;
                 <button nz-button>Enregistrer et finir plus tard</button>
             </div>
 
