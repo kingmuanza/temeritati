@@ -21,6 +21,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
+import { NzSliderModule } from 'ng-zorro-antd/slider';
 
 import { ProfilComponent } from './pages/profil/profil.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -32,6 +33,7 @@ import { CraComponent } from './pages/cra/cra.component';
 import { CraDetailComponent } from './pages/cra-detail/cra-detail.component';
 import { MoisComponent } from './_composants/mois/mois.component';
 import { EvaluationsComponent } from './pages/evaluations/evaluations.component';
+import { EvaluationsResumeComponent } from './pages/evaluations-resume/evaluations-resume.component';
 
 registerLocaleData(fr);
 
@@ -52,7 +54,8 @@ const ngZorroConfig: NzConfig = {
     CraComponent,
     CraDetailComponent,
     MoisComponent,
-    EvaluationsComponent
+    EvaluationsComponent,
+    EvaluationsResumeComponent
   ],
   imports: [
     BrowserModule,
@@ -73,6 +76,7 @@ const ngZorroConfig: NzConfig = {
     NzButtonModule,
     NzTableModule,
     NzStepsModule,
+    NzSliderModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: fr_FR },

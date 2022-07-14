@@ -73,11 +73,22 @@
             </p>
             <p>
                 Confirmez-vous la mission ?
-                <input type="radio" name="mission"> Oui <input type="radio" name="mission"> Non
+                <span style="margin-left: 10px;">
+                    <input type="radio" name="mission">
+                    <span style="margin-left: 5px;">
+                        Oui 
+                    </span>
+                </span>
+                <span style="margin-left: 10px;">
+                    <input type="radio" name="mission">
+                    <span style="margin-left: 5px;">
+                        Non 
+                    </span>
+                </span>
             </p>
         </div>
         <div class="contenu-boutons" style="">
-            <button nz-button nzType="primary">Commencez l'évaluation</button> &nbsp;
+            <button (click)="resumee()" nz-button nzType="primary">Commencez l'évaluation</button> &nbsp;
             <button nz-button>Enregistrer et finir plus tard</button>
         </div>
     </div>

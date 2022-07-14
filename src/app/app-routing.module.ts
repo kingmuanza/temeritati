@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CraDetailComponent } from './pages/cra-detail/cra-detail.component';
 import { CraComponent } from './pages/cra/cra.component';
+import { EvaluationsResumeComponent } from './pages/evaluations-resume/evaluations-resume.component';
 import { EvaluationsComponent } from './pages/evaluations/evaluations.component';
 import { LoginComponent } from './pages/login/login.component';
 import { Login2Component } from './pages/login2/login2.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'cra/detail', component: CraDetailComponent },
   { path: 'cra/detail/:id', component: CraComponent },
   { path: 'evaluations', component: EvaluationsComponent },
+  { path: 'evaluations/resume', component: EvaluationsResumeComponent },
   { path: '**', redirectTo: "cra" }
 ];
 

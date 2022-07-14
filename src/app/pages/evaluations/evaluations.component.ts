@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-evaluations',
@@ -9,9 +10,15 @@ export class EvaluationsComponent implements OnInit {
 
   client = '1';
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  resumee() {
+    this.router.navigate(['evaluations', 'resume']);
   }
 
 }
